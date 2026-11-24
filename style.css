@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #fde6ef, #fff5f8);
+  color: #85435f;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.card {
+  width: min(92vw, 460px);
+  padding: 28px 22px 18px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid white;
+  border-radius: 26px;
+  box-shadow: 0 18px 50px rgba(139, 66, 100, 0.14);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 8vw, 2.8rem);
+  font-weight: normal;
+}
+
+.card p {
+  margin: 8px 0 0;
+  color: #ad718b;
+  font-style: italic;
+}
+
+.bouquet {
+  display: block;
+  width: 100%;
+  margin: 4px auto 0;
+  overflow: visible;
+}
+
+.stems path {
+  fill: none;
+  stroke: #4d8956;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.leaves path {
+  fill: url(#leafGreen);
+  stroke: #397a50;
+  stroke-width: 2;
+}
+
+.wrap {
+  fill: url(#paperPink);
+  stroke: #df9db7;
+  stroke-width: 2;
+}
+
+.wrap-fold {
+  fill: rgba(255, 255, 255, 0.25);
+  stroke: rgba(223, 157, 183, 0.7);
+  stroke-width: 1.5;
+}
+
+.ribbon,
+.ribbon-tail {
+  fill: #d85d91;
+  stroke: #bd4779;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.flower-sway {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: sway 4s ease-in-out infinite;
+}
+
+.flower-sway:nth-child(2) {
+  animation-delay: -1.3s;
+}
+
+.flower-sway:nth-child(3) {
+  animation-delay: -2.6s;
+}
+
+.petal {
+  fill: url(#petalPink);
+  stroke: #d8578b;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.petal-vein {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.75);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.flower-center {
+  fill: #f5bc4f;
+  stroke: #d89032;
+  stroke-width: 2;
+}
+
+.stamen {
+  stroke: #d99232;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.anther {
+  fill: #ad632b;
+}
+
+.note {
+  color: #d85d91;
+  font-size: 1.5rem;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flower-sway {
+    animation: none;
+  }
+}
